@@ -31,6 +31,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="swiper-slide bg-primary-color main-slider-bg-dark thumb-left">
                 <div class="container table">
                     <div class="row table-cell">
@@ -71,6 +74,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="swiper-slide bg-secondary-color main-slider-bg-dark">
                 <div class="container table">
                     <div class="row table-cell">
@@ -108,6 +114,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="swiper-slide bg-orange-color main-slider-bg-dark">
                 <div class="container table">
                     <div class="row table-cell">
@@ -140,6 +149,9 @@
                     </div>
                 </div>
             </div>
+
+
+
             <div class="swiper-slide bg-green-color main-slider-bg-dark">
                 <div class="container table">
                     <div class="row table-cell">

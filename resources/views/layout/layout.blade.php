@@ -4,7 +4,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>{{ config('app.name') }} | @yield('page_title')</title>
+    <title>{{ config('app.name') }} | {{$page_title}}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ asset('css/fonts.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/crumina-fonts.css') }}">
