@@ -12,12 +12,24 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable, SoftDeletes;
 
+
+    protected $attributes =[
+        "name" => "",
+        "email" => "",
+        "email_verified_at" => null,
+        "phone" => null,
+        "phone_verified_at" => null,
+        "is_super_admin" => "0",
+        "profile_image" => null,
+        "status" => "1",
+        "password" => "",
+    ];
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = [];
+    // protected $fillable = [];
 
     protected $guarded = [];
 
@@ -40,4 +52,6 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
 }

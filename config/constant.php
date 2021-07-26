@@ -1,6 +1,7 @@
 <?php
 
 return [
+    "storage_disk" => ['disk' => 'public'],
     "icons" => [
         "seoicon-social-instagram",
         "seoicon-social-linkedin",

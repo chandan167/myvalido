@@ -32,5 +32,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::prefix('user')->group(function(){
         Route::get('list', [UserController::class, 'index'])->name('user.list');
+        Route::get('add', [UserController::class, 'showAddPage'])->name('user.add');
+        Route::post('add', [UserController::class, 'add'])->name('user.add');
     });
 });

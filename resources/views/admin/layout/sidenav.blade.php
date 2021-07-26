@@ -9,8 +9,19 @@
     </a>
 
     {!! genrate_sidenav() !!}
+
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
+
+    @foreach (config('constant.icons') as $item)
+
+    <li class="nav-item">
+        <a class="nav-link" href="javascript:void(0)">
+            <i class="{{$item}}" title="{{$item}}"></i>
+            <span>{{$item}}</span></a>
+    </li>
+    @endforeach
 
     <!-- Sidebar Toggler (Sidebar) -->
     <div class="text-center d-none d-md-inline">

@@ -20,12 +20,13 @@
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/crumina-fonts.css') }}">
+    <link href="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.min.css') }}" rel="stylesheet">
 
 </head>
 
 <body id="page-top" class="@auth
     @else
-    bg-gradient-primary
+                    bg-gradient-primary
 @endauth">
     @auth
         <!-- Page Wrapper -->
@@ -94,11 +95,29 @@
     <script>
         const images = document.getElementsByTagName('img');
         Array(...images).forEach(image => {
-            image.addEventListener('error',() =>{
-                image.src = "{{asset(config('constant.default_image'))}}";
+            image.addEventListener('error', () => {
+                image.src = "{{ asset(config('constant.default_image')) }}";
             })
 
         })
+
+        const imgprev = document.getElementById('img-prev')
+        if (imgprev) {
+            const input = imgprev.querySelector('input');
+            const img = imgprev.querySelector('img');
+
+            input.addEventListener('change', (e) => {
+                const [file] = input.files;
+                if (file) {
+                    var reader = new FileReader();
+                    reader.onload = function() {
+                        img.src = reader.result;
+                    };
+                    reader.readAsDataURL(file);
+                }
+            });
+
+        }
     </script>
     <!-- Bootstrap core JavaScript-->
     <script src="{{ asset('admin/vendor/jquery/jquery.min.js') }}"></script>
@@ -109,6 +128,13 @@
 
     <!-- Custom scripts for all pages-->
     <script src="{{ asset('admin/js/sb-admin-2.min.js') }}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ asset('admin/vendor/datatables/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/vendor/datatables/dataTables.bootstrap4.min.js') }}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('admin/js/demo/datatables-demo.js') }}"></script>
 
     @yield('customjs')
 
